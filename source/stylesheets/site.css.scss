@@ -27,6 +27,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
+
+.btn-orange {
+  background-color: $orange;
+  color: white;
+  &:hover,
+  &:focus {
+    background-color: darken($orange, 10%);
+    color: white;
+  }
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color:rgba(255,255,255,1);
   transition: $transition;
