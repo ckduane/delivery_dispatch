@@ -4,7 +4,24 @@ $light-blue: #99B2DD;
 $blue: #274156;
 $gray: #333745;
 
+$f-header: 'Rammetto One', cursive;
+
 
 body {
   background-color: $blue;
+}
+
+.font-header {
+  font-family: $f-header;
+  color: $orange!important;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.tagline {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

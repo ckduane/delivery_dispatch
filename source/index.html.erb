@@ -1,8 +1,41 @@
 ---
 title: Home
 ---
-<%= image_tag( lorem.image('1024x400', random_color: true, text: 'imagine some sort of image here'), class: 'img-fluid' )%>
-<h1 class="text-center"> <%= current_page.data.title %></h1>
-<h2 class="text-center"><%= lorem.words 6 %></h2>
-<h3 class="text-center"><%= lorem.words 13 %></h3>
-<%= image_tag( lorem.image('1024x400', random_color: true, text: 'imagine another sort of image here'), class: 'img-fluid' )%>
+<div class="position-relative">
+  <%= image_tag( lorem.image('1024x450', random_color: true), class: 'img-fluid' )%>
+	<h2 class="position-absolute tagline"><%= current_page.data.title %></h1>
+</div>
+<div class="text-white p-5">
+	<h2 class="text-center"><%= lorem.words 6 %></h2>
+	<p><%= lorem.words 60 %></p>
+</div>
+
+<div class="container-fluid bg-white text-blue py-5">
+	<div class="row p-md-3 justify-content-center">
+		<div class="col-12 col-md-4 p-3 order-2 order-md-1">
+			<h3 class="font-header">Order Online</h3>
+			<p><%= lorem.words 19 %></p>
+		</div>
+		<div class="col-12 col-md-4 order-1 order-md-2">
+			<%= image_tag("https://image.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg", class: "img-fluid") %>
+		</div>
+	</div>
+	<div class="row p-md-3 justify-content-center">
+		<div class="col-12 col-md-4 order-1 order-md-1">
+			<%= image_tag("https://image.freepik.com/free-vector/tiny-cooks-making-spaghetti-dinner-isolated-flat-illustration_74855-11092.jpg", class: "img-fluid") %>
+		</div>
+		<div class="col-12 col-md-4 p-3 order-2 order-md-2">
+			<h3 class="font-header">Making Meals</h3>
+			<p><%= lorem.words 24 %></p>
+		</div>
+	</div>
+	<div class="row p-md-3 justify-content-center">
+		<div class="col-12 col-md-4 p-3 order-2 order-md-1">
+			<h3 class="font-header">Dispatching Delivery</h3>
+			<p><%= lorem.words 14 %></p>
+		</div>
+		<div class="col-12 col-md-4 order-1 order-md-2">
+			<%= image_tag("https://image.freepik.com/free-vector/express-courier-scooter-shipping-order_74855-6447.jpg", class: "img-fluid") %>
+		</div>
+	</div>
+</div>
