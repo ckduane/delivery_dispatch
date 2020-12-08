@@ -1,24 +1,27 @@
+$yellow: #EAF0CE;
+$orange: #D1603D;
+$light-blue: #99B2DD;
+$blue: #274156;
+$gray: #333745;
+
+$f-header: 'Rammetto One', cursive;
+
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  background-color: $blue;
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+.font-header {
+  font-family: $f-header;
+  color: $orange!important;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+.text-blue {
+  color: $blue;
+}
+
+.tagline {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
