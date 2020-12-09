@@ -28,12 +28,12 @@ steps:
 
 <div class="container-fluid bg-pattern text-blue py-5">
 	<% current_page.data.steps.each_with_index do |s, i| %>
-		<div class="row p-md-3 bg-white mx-5 justify-content-center">
-			<div class="col-12 col-md-4 p-3 order-2 text-center text-md-left <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
+		<div class="row px-md-5 py-md-2 bg-white mx-5 justify-content-center">
+			<div class="col-12 col-md-5 p-3 order-2 text-center text-md-left content-mw <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
 				<h3 class="font-header"><%= s.title %></h3>
 				<p><%= s.content %></p>
 			</div>
-			<div class="col-12 col-md-4 order-1 <%= i.even? ? 'order-md-2' : 'order-md-1' %>">
+			<div class="col-12 col-md-7 order-1 <%= i.even? ? 'order-md-2' : 'order-md-1' %>">
 				<%= image_tag( s.image, class: "img-fluid") %>
 			</div>
 		</div>

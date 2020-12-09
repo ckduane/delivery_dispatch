@@ -14,6 +14,8 @@ body {
 .font-header {
   font-family: $f-header;
   color: $orange !important;
+}
+nav .font-header {
   transition: $transition;
   &:hover, &:focus {
     color: darken($orange, 10%) !important;
@@ -54,4 +56,8 @@ body {
     color: rgba(255,255,255,.75);
     transition: $transition;
   }
+}
+
+.content-mw {
+  max-width: 25rem;
 }
