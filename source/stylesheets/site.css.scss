@@ -13,11 +13,21 @@ body {
 
 .font-header {
   font-family: $f-header;
-  color: $orange!important;
+  color: $orange !important;
+  transition: $transition;
+  &:hover, &:focus {
+    color: darken($orange, 10%) !important;
+    transition: $transition;
+  }
 }
 
 .text-blue {
   color: $blue;
+}
+
+.bg-pattern {
+  // background-image: url("https://image.freepik.com/free-vector/hand-drawn-abstract-organic-shapes-background_23-2148435028.jpg");
+  background-image: url("https://image.freepik.com/free-vector/hand-drawn-organic-shapes-background-design_23-2148433488.jpg");
 }
 
 .tagline {
@@ -40,8 +50,7 @@ body {
 .navbar-dark .navbar-nav .nav-link {
   color:rgba(255,255,255,1);
   transition: $transition;
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
     color: rgba(255,255,255,.75);
     transition: $transition;
   }
