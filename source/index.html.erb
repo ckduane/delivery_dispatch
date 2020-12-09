@@ -1,45 +1,43 @@
 ---
 title: Home
-content: why you want to sign up to get meals delivered to your house cooked or ready to cook?
+tagline: why you want to sign up to get meals delivered to your house cooked or ready to cook?
+tagline_image: images/hero.jpg
+main_title: Main Title
+main_content: Main content goes here like this look at it there is something to be read here. Are you reading it right now? It is also editable which is pretty cool. But everything here is editable. Ta-da! Main content goes here like this look at it there is something to be read here. Are you reading it right now? It is also editable which is pretty cool. But everything here is editable. Ta-da!
+steps:
+  - title: Order Online
+    content: sed porro in nostrum et porro nesciunt voluptas aut rem incidunt nemo ut quia veniam commodi debitis explicabo qui
+    image: https://image.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg
+  - title: Making Meals
+    content: quidem pariatur adipisci in quos est et enim aspernatur nesciunt sunt voluptatem quia itaque dolores similique officia dolores delectus velit consequatur aut quis nesciunt
+    image: https://image.freepik.com/free-vector/tiny-cooks-making-spaghetti-dinner-isolated-flat-illustration_74855-11092.jpg
+  - title: Dispatching Delivery
+    content: dolore nulla numquam quisquam sequi ipsam cumque quod tempore hic ipsum inventore aut quidem
+    image: https://image.freepik.com/free-vector/express-courier-scooter-shipping-order_74855-6447.jpg
 ---
-<div class="position-relative">
-  <%= image_tag("images/hero.jpg", class: 'img-fluid' )%>
-  <div class="position-absolute tagline bg-white text-center">
-		<h2 class="p-3"><%= current_page.data.content %></h1>
-			<button type="button" class="btn btn-orange mb-4">Sign Up</button>
+<div class="position-relative bg-image" style="background-image: url(<%= current_page.data.tagline_image %>); background-size: cover; background-repeat: no-repeat;">
+  <div class="position-absolute rounded-lg bg-white shadow-lg text-center tagline content-mw">
+		<p class="p-3"><%= current_page.data.tagline %></p>
+		<div class="bg-pattern rounded-bottom">
+			<button type="button" class="btn btn-orange my-4">Sign Up</button>
+		</div>
   </div>
 </div>
-<div class="text-white p-5">
-	<h2 class="text-center"><%= lorem.words 6 %></h2>
-	<p><%= lorem.words 60 %></p>
+<div class="text-white text-center p-5">
+	<h2><%= current_page.data.main_title %></h2>
+	<p class="content-wide-mw"><%= current_page.data.main_content %></p>
 </div>
 
-<div class="container-fluid bg-white text-blue py-5">
-	<div class="row p-md-3 justify-content-center">
-		<div class="col-12 col-md-4 p-3 order-2 order-md-1">
-			<h3 class="font-header">Order Online</h3>
-			<p><%= lorem.words 19 %></p>
+<div class="container-fluid bg-pattern text-blue py-5">
+	<% current_page.data.steps.each_with_index do |s, i| %>
+		<div class="row d-flex align-items-center px-md-5 bg-white mx-5 justify-content-center <%= i == 0 ? 'pt-md-5' : 'pt-md-2'%> <%= i == 2 ? 'pb-md-5' : 'pb-md-2'%>">
+			<div class="col-12 col-md-4 offset-md-1 p-3 order-2 text-center text-md-left <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
+				<h3><%= s.title %></h3>
+				<p class="content-mw"><%= s.content %></p>
+			</div>
+			<div class="col-12 col-md-7 order-1 <%= i.even? ? 'order-md-2' : 'order-md-1' %>">
+				<%= image_tag( s.image, class: "img-fluid") %>
+			</div>
 		</div>
-		<div class="col-12 col-md-4 order-1 order-md-2">
-			<%= image_tag("https://image.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg", class: "img-fluid") %>
-		</div>
-	</div>
-	<div class="row p-md-3 justify-content-center">
-		<div class="col-12 col-md-4 order-1 order-md-1">
-			<%= image_tag("https://image.freepik.com/free-vector/tiny-cooks-making-spaghetti-dinner-isolated-flat-illustration_74855-11092.jpg", class: "img-fluid") %>
-		</div>
-		<div class="col-12 col-md-4 p-3 order-2 order-md-2">
-			<h3 class="font-header">Making Meals</h3>
-			<p><%= lorem.words 24 %></p>
-		</div>
-	</div>
-	<div class="row p-md-3 justify-content-center">
-		<div class="col-12 col-md-4 p-3 order-2 order-md-1">
-			<h3 class="font-header">Dispatching Delivery</h3>
-			<p><%= lorem.words 14 %></p>
-		</div>
-		<div class="col-12 col-md-4 order-1 order-md-2">
-			<%= image_tag("https://image.freepik.com/free-vector/express-courier-scooter-shipping-order_74855-6447.jpg", class: "img-fluid") %>
-		</div>
-	</div>
+  <% end %>
 </div>

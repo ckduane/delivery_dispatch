@@ -5,32 +5,63 @@ $blue: #274156;
 $gray: #333745;
 
 $f-header: 'Rammetto One', cursive;
-$transition: all .3s ease;
+$f-oswald: Oswald, serif;
 
+$transition: all .3s ease;
 
 body {
   background-color: $blue;
 }
 
+h2 {
+  font-family: $f-oswald;
+}
+
+h3 {
+  font-family: $f-header;
+  color: $orange;
+}
+
 .font-header {
   font-family: $f-header;
-  color: $orange!important;
+  color: $orange !important;
+}
+nav .font-header {
+  transition: $transition;
+  &:hover, &:focus {
+    color: darken($orange, 10%) !important;
+    transition: $transition;
+  }
 }
 
 .text-blue {
   color: $blue;
 }
 
+.bg-image {
+  height: 25rem;
+}
+
+.bg-pattern {
+  background-image: url("https://image.freepik.com/free-vector/hand-drawn-organic-shapes-background-design_23-2148433488.jpg");
+}
+
 .tagline {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  p {
+    font-family: $f-oswald;
+    font-size: 2rem;
+  }
 }
 
 
 .btn-orange {
   background-color: $orange;
+  font-family: $f-header;
   color: white;
+  text-transform: uppercase;
   &:hover,
   &:focus {
     background-color: darken($orange, 10%);
@@ -38,11 +69,34 @@ body {
   }
 }
 
+
+.content-mw {
+  max-width: 25rem;
+  margin: auto;
+}
+.content-wide-mw {
+  max-width: 50rem;
+  margin: auto;
+} 
+
+
+
 .navbar-dark .navbar-nav .nav-link {
+  font-family: $f-oswald;
   color:rgba(255,255,255,1);
+  letter-spacing: 1.5px;
   transition: $transition;
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
+    color: rgba(255,255,255,.75);
+    transition: $transition;
+  }
+}
+
+footer .navbar-nav a {
+  color: white;
+  font-size: 13px;
+  transition: $transition;
+  &:focus, &:hover {
     color: rgba(255,255,255,.75);
     transition: $transition;
   }
