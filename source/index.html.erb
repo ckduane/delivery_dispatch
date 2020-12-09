@@ -29,7 +29,7 @@ steps:
 <div class="container-fluid bg-pattern text-blue py-5">
 	<% current_page.data.steps.each_with_index do |s, i| %>
 		<div class="row p-md-3 bg-white mx-5 justify-content-center">
-			<div class="col-12 col-md-4 p-3 order-2 <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
+			<div class="col-12 col-md-4 p-3 order-2 text-center text-md-left <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
 				<h3 class="font-header"><%= s.title %></h3>
 				<p><%= s.content %></p>
 			</div>
@@ -38,3 +38,4 @@ steps:
 			</div>
 		</div>
   <% end %>
+</div>
