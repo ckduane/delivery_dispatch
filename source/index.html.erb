@@ -1,24 +1,32 @@
 ---
 title: Home
-content: why you want to sign up to get meals delivered to your house cooked or ready to cook?
+tagline: why you want to sign up to get meals delivered to your house cooked or ready to cook?
+main_title: Main Title
+main_content: Main content goes here like this look at it there is something to be read here. Are you reading it right now? It is also editable which is pretty cool. But everything here is editable. Ta-da! Main content goes here like this look at it there is something to be read here. Are you reading it right now? It is also editable which is pretty cool. But everything here is editable. Ta-da!
+step_1_title: Order Online
+step_1_content: sed porro in nostrum et porro nesciunt voluptas aut rem incidunt nemo ut quia veniam commodi debitis explicabo qui
+step_2_title: Making Meals
+step_2_content: quidem pariatur adipisci in quos est et enim aspernatur nesciunt sunt voluptatem quia itaque dolores similique officia dolores delectus velit consequatur aut quis nesciunt
+step_3_title: Dispatching Delivery
+step_3_content: dolore nulla numquam quisquam sequi ipsam cumque quod tempore hic ipsum inventore aut quidem
 ---
 <div class="position-relative">
   <%= image_tag("images/hero.jpg", class: 'img-fluid' )%>
   <div class="position-absolute tagline bg-white text-center">
-		<h2 class="p-3"><%= current_page.data.content %></h1>
+		<h2 class="p-3"><%= current_page.data.tagline %></h1>
 			<button type="button" class="btn btn-orange mb-4">Sign Up</button>
   </div>
 </div>
 <div class="text-white p-5">
-	<h2 class="text-center"><%= lorem.words 6 %></h2>
-	<p><%= lorem.words 60 %></p>
+	<h2 class="text-center"><%= current_page.data.main_title %></h2>
+	<p><%= current_page.data.main_content %></p>
 </div>
 
 <div class="container-fluid bg-white text-blue py-5">
 	<div class="row p-md-3 justify-content-center">
 		<div class="col-12 col-md-4 p-3 order-2 order-md-1">
-			<h3 class="font-header">Order Online</h3>
-			<p><%= lorem.words 19 %></p>
+			<h3 class="font-header"><%= current_page.data.step_1_title %></h3>
+			<p><%= current_page.data.step_1_content %></p>
 		</div>
 		<div class="col-12 col-md-4 order-1 order-md-2">
 			<%= image_tag("https://image.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg", class: "img-fluid") %>
@@ -29,14 +37,14 @@ content: why you want to sign up to get meals delivered to your house cooked or 
 			<%= image_tag("https://image.freepik.com/free-vector/tiny-cooks-making-spaghetti-dinner-isolated-flat-illustration_74855-11092.jpg", class: "img-fluid") %>
 		</div>
 		<div class="col-12 col-md-4 p-3 order-2 order-md-2">
-			<h3 class="font-header">Making Meals</h3>
-			<p><%= lorem.words 24 %></p>
+			<h3 class="font-header"><%= current_page.data.step_2_title %></h3>
+			<p><%= current_page.data.step_2_content %>></p>
 		</div>
 	</div>
 	<div class="row p-md-3 justify-content-center">
 		<div class="col-12 col-md-4 p-3 order-2 order-md-1">
-			<h3 class="font-header">Dispatching Delivery</h3>
-			<p><%= lorem.words 14 %></p>
+			<h3 class="font-header"><%= current_page.data.step_3_title %></h3>
+			<p><%= current_page.data.step_3_content %></p>
 		</div>
 		<div class="col-12 col-md-4 order-1 order-md-2">
 			<%= image_tag("https://image.freepik.com/free-vector/express-courier-scooter-shipping-order_74855-6447.jpg", class: "img-fluid") %>
