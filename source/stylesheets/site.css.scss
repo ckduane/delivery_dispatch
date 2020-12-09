@@ -27,8 +27,11 @@ nav .font-header {
   color: $blue;
 }
 
+.bg-image {
+  height: 25rem;
+}
+
 .bg-pattern {
-  // background-image: url("https://image.freepik.com/free-vector/hand-drawn-abstract-organic-shapes-background_23-2148435028.jpg");
   background-image: url("https://image.freepik.com/free-vector/hand-drawn-organic-shapes-background-design_23-2148433488.jpg");
 }
 
@@ -41,7 +44,9 @@ nav .font-header {
 
 .btn-orange {
   background-color: $orange;
+  font-family: $f-header;
   color: white;
+  text-transform: uppercase;
   &:hover,
   &:focus {
     background-color: darken($orange, 10%);
@@ -58,6 +63,12 @@ nav .font-header {
   }
 }
 
+.content-wide-mw {
+  max-width: 50rem;
+  margin: auto;
+} 
+
 .content-mw {
   max-width: 25rem;
+  margin: auto;
 }

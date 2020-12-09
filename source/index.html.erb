@@ -1,6 +1,7 @@
 ---
 title: Home
 tagline: why you want to sign up to get meals delivered to your house cooked or ready to cook?
+tagline_image: images/hero.jpg
 main_title: Main Title
 main_content: Main content goes here like this look at it there is something to be read here. Are you reading it right now? It is also editable which is pretty cool. But everything here is editable. Ta-da! Main content goes here like this look at it there is something to be read here. Are you reading it right now? It is also editable which is pretty cool. But everything here is editable. Ta-da!
 steps:
@@ -14,24 +15,25 @@ steps:
     content: dolore nulla numquam quisquam sequi ipsam cumque quod tempore hic ipsum inventore aut quidem
     image: https://image.freepik.com/free-vector/express-courier-scooter-shipping-order_74855-6447.jpg
 ---
-<div class="position-relative">
-  <%= image_tag("images/hero.jpg", class: 'img-fluid' )%>
-  <div class="position-absolute tagline bg-white text-center">
-		<h2 class="p-3"><%= current_page.data.tagline %></h1>
-			<button type="button" class="btn btn-orange mb-4">Sign Up</button>
+<div class="position-relative bg-image" style="background-image: url(<%= current_page.data.tagline_image %>); background-size: cover; background-repeat: no-repeat;">
+  <div class="position-absolute tagline bg-white text-center content-mw">
+		<h2 class="p-3"><%= current_page.data.tagline %></h2>
+		<div class="bg-pattern">
+			<button type="button" class="btn btn-orange my-4">Sign Up</button>
+		</div>
   </div>
 </div>
-<div class="text-white p-5">
-	<h2 class="text-center"><%= current_page.data.main_title %></h2>
-	<p><%= current_page.data.main_content %></p>
+<div class="text-white text-center p-5">
+	<h2><%= current_page.data.main_title %></h2>
+	<p class="content-wide-mw"><%= current_page.data.main_content %></p>
 </div>
 
 <div class="container-fluid bg-pattern text-blue py-5">
 	<% current_page.data.steps.each_with_index do |s, i| %>
-		<div class="row px-md-5 py-md-2 bg-white mx-5 justify-content-center">
-			<div class="col-12 col-md-5 p-3 order-2 text-center text-md-left content-mw <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
+		<div class="row d-flex align-items-center px-md-5 bg-white mx-5 justify-content-center <%= i == 0 ? 'pt-md-5' : 'pt-md-2'%> <%= i == 2 ? 'pb-md-5' : 'pb-md-2'%>">
+			<div class="col-12 col-md-4 offset-md-1 p-3 order-2 text-center text-md-left <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
 				<h3 class="font-header"><%= s.title %></h3>
-				<p><%= s.content %></p>
+				<p class="content-mw"><%= s.content %></p>
 			</div>
 			<div class="col-12 col-md-7 order-1 <%= i.even? ? 'order-md-2' : 'order-md-1' %>">
 				<%= image_tag( s.image, class: "img-fluid") %>
