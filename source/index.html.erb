@@ -1,9 +1,13 @@
 ---
 title: Home
+content: why you want to sign up to get meals delivered to your house cooked or ready to cook?
 ---
 <div class="position-relative">
-  <%= image_tag( lorem.image('1024x450', random_color: true), class: 'img-fluid' )%>
-	<h2 class="position-absolute tagline"><%= current_page.data.title %></h1>
+  <%= image_tag("images/hero.jpg", class: 'img-fluid' )%>
+  <div class="position-absolute tagline bg-white text-center">
+		<h2 class="p-3"><%= current_page.data.content %></h1>
+			<button type="button" class="btn btn-orange mb-4">Sign Up</button>
+  </div>
 </div>
 <div class="text-white p-5">
 	<h2 class="text-center"><%= lorem.words 6 %></h2>

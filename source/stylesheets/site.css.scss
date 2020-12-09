@@ -5,6 +5,7 @@ $blue: #274156;
 $gray: #333745;
 
 $f-header: 'Rammetto One', cursive;
+$transition: all .3s ease;
 
 
 body {
@@ -24,4 +25,25 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.btn-orange {
+  background-color: $orange;
+  color: white;
+  &:hover,
+  &:focus {
+    background-color: darken($orange, 10%);
+    color: white;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color:rgba(255,255,255,1);
+  transition: $transition;
+  &:focus,
+  &:hover {
+    color: rgba(255,255,255,.75);
+    transition: $transition;
+  }
 }
