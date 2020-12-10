@@ -44,4 +44,11 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
 activate :livereload
+
+activate :blog do | blog |
+  blog.permalink = "blog/{title}.html"
+  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+  blog.layout = "blog-layout"
+end
