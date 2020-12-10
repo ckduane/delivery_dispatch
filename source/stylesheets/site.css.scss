@@ -13,7 +13,7 @@ body {
   background-color: $blue;
 }
 
-h2 {
+h1, h2, h4 {
   font-family: $f-oswald;
 }
 
@@ -22,6 +22,9 @@ h3 {
   color: $orange;
 }
 
+h4 {
+  color: $blue;
+}
 .font-header {
   font-family: $f-header;
   color: $orange !important;

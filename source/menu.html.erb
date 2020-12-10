@@ -1,0 +1,33 @@
+---
+title: Menu
+tagline: Eat this food for your body
+content: Your body will dissolve it mostly and the rest will come out in as warm compact moist ..soil. Color and texture may vary.
+---
+
+<div class="container-fluid bg-pattern p-5">
+	<div class="row bg-white text-center py-5">
+		<div class="col-12">
+			<h1><%= current_page.data.tagline %></h1>
+			<h2><%= current_page.data.content %></h2>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row bg-white text-center py-5">
+		<% data.menu.items.each do |item| %>
+			<div class="col-6 col-md-3 my-3">
+			  <div class="card shadow">
+			  	<%= image_tag(item.image, class: "card-img-top") %>
+			  	<div class="card-body">
+			  		<h4 class="card-title">
+			  			<%= item.name %>
+			  		</h4>
+			  		<div class="card-text">
+			  			<%= item.ingredients %>
+			  		</div>
+			  	</div>
+			  </div>
+			</div>
+	  <% end %>
+	</div>
+</div>

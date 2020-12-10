@@ -1,0 +1,73 @@
+items:
+  - category: Appetizers
+    name: Chia Pudding
+    ingredients: Chia seeds, coconut milk, banana, blueberries
+    image: images/menu/app_chiapuddling.jpg
+  - category: Appetizers
+    name: Maple Grandola
+    ingredients: Rolled oats, maple syrup, sliced almonds
+    image: images/menu/app_granola.jpg
+  - category: Appetizers
+    name: Smoothie Bowl
+    ingredients: Blueberries, strawberries, soymilk, rolled oats, honey
+    image: images/menu/app_smoothie-bowl.jpg
+
+  - category: Beverages
+    name: Coconut
+    ingredients: Coconut, a speck of green
+    image: images/menu/bev_coconut.jpg
+  - category: Beverages
+    name: Kiwi
+    ingredients: Kiwi
+    image: images/menu/bev_kiwi.jpg
+  - category: Beverages
+    name: Lemonade
+    ingredients: Lemons, mint, honey, water
+    image: images/menu/bev_lemonade.jpg
+
+  - category: Mains
+    name: Roughage Bowl
+    ingredients: Carrots, tomatoes, grains, proteins
+    image: images/menu/main_bowl.jpg
+  - category: Mains
+    name: Cilantro Lime Cauliflower Rice
+    ingredients: Cauliflower, green onions, cilantro, lime
+    image: images/menu/main_cauliflower.jpg
+  - category: Mains
+    name: Noodles
+    ingredients: Noodles
+    image: images/menu/main_noodles.jpg
+  - category: Mains
+    name: Tomato Bisque
+    ingredients: Tomato, bisque
+    image: images/menu/main_tomato-bisque.jpg
+
+  - category: Pastries
+    name: Tea Cake
+    ingredients: Flour, soymilk, sugar
+    image: images/menu/pastries_cake.jpg
+  - category: Pastries
+    name: Cinammon Roll
+    ingredients: Flour, sugar, cinnamon, roll
+    image: images/menu/pastries_cinnamon.jpg
+  - category: Pastries
+    name: Banana Bread
+    ingredients: Flour, soymilk, sugar, banana, walnuts
+    image: images/menu/pastries_banana.jpg
+
+  - category: Dessert
+    name: Fudge Brownie
+    ingredients: Flour, sugar, cinnamon, chocolate
+    image: images/menu/dessert_brownie.jpg
+  - category: Dessert
+    name: Cinammon Sugar Churro
+    ingredients: Flour, sugar, cinnamon, oil
+    image: images/menu/dessert_churro.jpg
+  - category: Dessert
+    name: Chocolate Chip Cookie
+    ingredients: Flour, soymilk, sugar, vanilla, chocolate, oil
+    image: images/menu/dessert_cookie.jpg
+  - category: Dessert
+    name: Pistachio Ice Cream
+    ingredients: Coconut milk, pistachio sugar, chocolate
+    image: images/menu/dessert_icecream.jpg
