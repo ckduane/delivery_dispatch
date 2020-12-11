@@ -12,7 +12,7 @@ beverages:
   - name: Coconut
     ingredients: Coconut, a speck of green
     image: images/menu/bev_coconut.jpg
-  - name: Kiwi
+  - name: Kiwi Drink
     ingredients: Kiwi
     image: images/menu/bev_kiwi.jpg
   - name: Lemonade
