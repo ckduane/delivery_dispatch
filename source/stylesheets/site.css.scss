@@ -82,7 +82,11 @@ nav .font-header {
   margin: auto;
 } 
 
-
+.card-img-top {
+  max-height: 15rem;
+  height: 100%;
+  width: auto;
+}
 
 .navbar-dark .navbar-nav .nav-link {
   font-family: $f-oswald;
