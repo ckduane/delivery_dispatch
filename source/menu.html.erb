@@ -14,14 +14,14 @@ content: Your body will dissolve it mostly and the rest will come out in as warm
 </div>
 
 <div class="row px-3 pt-3 pb-5">
-  <div class="col-12 col-md-2">
+  <div class="col-12 col-md-3 col-lg-2">
     <div class="list-group" id="list-tab" role="tablist">
     	<% data.menu.each_with_index do |m, i| %>
       	<a class="list-group-item list-group-item-action <%= i == 0 ? 'active' : '' %>" id="list-<%= m.first %>-list" data-toggle="list" href="#list-<%= m.first %>" role="tab" aria-controls="<%= m.first %>"><%= m.first %></a>
     	<% end %>
     </div>
   </div>
-  <div class="col-12 col-md-10">
+  <div class="col-12 col-md-9 col-lg-10">
     <div class="tab-content" id="nav-tabContent">
     	<% data.menu.each_with_index do |m, i| %>
       	<div class="tab-pane fade <%= i == 0 ? 'show active' : '' %>" id="list-<%= m.first %>" role="tabpanel" aria-labelledby="list-<%= m.first %>-list">
