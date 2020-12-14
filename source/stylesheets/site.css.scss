@@ -25,6 +25,15 @@ h3 {
 h4 {
   color: $blue;
 }
+
+a {
+  transition: $transition;
+  &:hover, &:focus {
+    color: $orange;
+    transition: $transition;
+  }
+}
+
 .font-header {
   font-family: $f-header;
   color: $orange !important;
