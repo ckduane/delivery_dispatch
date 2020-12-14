@@ -1,7 +1,12 @@
-<div class="card-body">
-	<h4 class="card-title text-lowercase">
-		<%= name %>
-	</h4>
-	<div class="card-text text-lowercase">
+<div class="container-fluid bg-pattern p-5">
+	<div class="row bg-white">
+		<div class="col-12 col-md-6 p-5 order-2 order-md-1">
+			<h3 class="text-lowercase"><%= name %></h3>
+			<h4>ingredients:</h4>
+			<p class="text-lowercase"><%= ingredients %></p>
+		</div>
+		<div class="col-12 col-md-6 order-1 order-md-2">
+			<%= image_tag(image, class: 'img-fluid')%>
+		</div>
 	</div>
 </div>

@@ -32,7 +32,7 @@ content: Your body will dissolve it mostly and the rest will come out in as warm
 		    					<%= image_tag(item.image, class: "card-img-top") %>
 		    					<div class="card-body">
 		    						<h4 class="card-title text-lowercase">
-		    							<a href="#" class="stretched-link text-decoration-none"><%= item.name %></a>
+		    							<a href="/menu/<%= item.name.parameterize(separator: '-') %>.html" class="stretched-link text-decoration-none"><%= item.name %></a>
 		    						</h4>
 		    						<div class="card-text text-lowercase">
 		    							<small><%= item.ingredients %></small>
