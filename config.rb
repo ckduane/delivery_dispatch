@@ -27,6 +27,12 @@ page '/*.txt', layout: false
 #   },
 # )
 
+data.menu.each_with_index do |m , i|
+	m[1].each do |item|
+		proxy "/menu/#{item.name.parameterize(separator: '-')}.html", "/menu/template.html", :locals => { :name => item.name }, :ignore => true
+	end
+end
+
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
