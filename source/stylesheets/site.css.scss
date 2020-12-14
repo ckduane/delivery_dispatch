@@ -30,6 +30,7 @@ h4 {
   color: $orange !important;
 }
 nav .font-header {
+  letter-spacing: 1px;
   transition: $transition;
   &:hover, &:focus {
     color: darken($orange, 10%) !important;
@@ -95,15 +96,20 @@ nav .font-header {
   font-family: $f-header;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
   font-family: $f-oswald;
-  color:rgba(255,255,255,1);
+  color: $blue;
   letter-spacing: 1.5px;
   transition: $transition;
   &:focus, &:hover {
-    color: rgba(255,255,255,.75);
+    color: $orange;
+    opacity: .75;
     transition: $transition;
   }
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
 }
 
 footer .navbar-nav a {
