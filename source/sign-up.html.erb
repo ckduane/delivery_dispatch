@@ -1,8 +1,15 @@
 ---
 title: Sign Up
-tagline: Food for you to eat but first email and are we in your delivery radius? We won't know until someone tells
+tagline: Food for you to eat but first email and are we in your delivery radius?
+tagline_image: https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
 ---
-
+<div class="position-relative bg-image" style="background-image: url(<%= current_page.data.tagline_image %>); background-size: cover; background-repeat: no-repeat; background-position: center">
+	<div class="position-absolute rounded-lg bg-white shadow-lg text-center tagline content-mw">
+		<p class="content-wide-mw text-center p-3"><%= current_page.data.tagline %></p>
+		<div class="bg-pattern mt-4 h-set">
+		</div>
+	</div>
+</div>
 <div class="container-fluid bg-pattern p-5">
 	<form class="bg-white p-5">
 		<h1 class="text-center"><%= current_page.data.title %></h1>
