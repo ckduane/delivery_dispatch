@@ -8,26 +8,42 @@ content: Your body will dissolve it mostly and the rest will come out in as warm
 	<div class="row bg-white text-center py-5">
 		<div class="col-12">
 			<h1><%= current_page.data.tagline %></h1>
-			<h2><%= current_page.data.content %></h2>
+			<h4 class="content-wide-mw"><%= current_page.data.content %></h4>
 		</div>
 	</div>
 </div>
-<div class="container-fluid">
-	<div class="row bg-white text-center py-5">
-		<% data.menu.items.each do |item| %>
-			<div class="col-6 col-md-3 my-3">
-			  <div class="card shadow">
-			  	<%= image_tag(item.image, class: "card-img-top") %>
-			  	<div class="card-body">
-			  		<h4 class="card-title">
-			  			<%= item.name %>
-			  		</h4>
-			  		<div class="card-text">
-			  			<%= item.ingredients %>
-			  		</div>
-			  	</div>
-			  </div>
-			</div>
-	  <% end %>
-	</div>
+
+<div class="row px-3 pt-3 pb-5">
+  <div class="col-12 col-md-3 col-lg-2">
+    <div class="list-group" id="list-tab" role="tablist">
+    	<% data.menu.each_with_index do |m, i| %>
+      	<a class="list-group-item list-group-item-action <%= i == 0 ? 'active' : '' %>" id="list-<%= m.first %>-list" data-toggle="list" href="#list-<%= m.first %>" role="tab" aria-controls="<%= m.first %>"><%= m.first %></a>
+    	<% end %>
+    </div>
+  </div>
+  <div class="col-12 col-md-9 col-lg-10">
+    <div class="tab-content" id="nav-tabContent">
+    	<% data.menu.each_with_index do |m, i| %>
+      	<div class="tab-pane fade <%= i == 0 ? 'show active' : '' %>" id="list-<%= m.first %>" role="tabpanel" aria-labelledby="list-<%= m.first %>-list">
+      		<div class="row">
+	      		<% m[1].each do |item| %>
+		      		<div class="col-6 col-md-4 p-2">
+		    				<div class="card shadow">
+		    					<%= image_tag(item.image, class: "card-img-top") %>
+		    					<div class="card-body">
+		    						<h4 class="card-title text-lowercase">
+		    							<a href="/menu/<%= item.name.parameterize(separator: '-') %>.html" class="stretched-link text-decoration-none text-blue"><%= item.name %></a>
+		    						</h4>
+		    						<div class="card-text text-lowercase">
+		    							<small><%= item.ingredients %></small>
+		    						</div>
+		    					</div>
+		    				</div>
+		    			</div>
+	      		<% end %>
+	      	</div>
+      	</div>
+    	<% end %>
+    </div>
+  </div>
 </div>
