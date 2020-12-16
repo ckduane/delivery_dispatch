@@ -1,12 +1,33 @@
-<h1>Recent articles</h1>
+---
+title: Recent Posts
+content: keep up to date with dreams from dispatch delivery
+---
 
-<% blog.articles.each do | article | %>
-  <article>
-    <h2>
-      <%= article.title %>
-    </h2>
+<div class="container-fluid bg-pattern p-5">
+	<div class="row bg-white text-center py-5">
+		<div class="col-12">
+			<h1><%= current_page.data.title %></h1>
+			<h4 class="content-wide-mw"><%= current_page.data.content %></h4>
+		</div>
+	</div>
+</div>
 
-    <%= link_to 'Read more', article %>
-  </article>
+<div class="container-fluid bg-white p-5">
+	<div class="row">
+		<div class="col">
+			<% blog.articles.each do | article | %>
+			  <article class="blog-post">
+			    <h2 class="blog-post-title pt-4">
+			      <%= article.title %>
+			      
+			    </h2>
+			    <small class="text-muted"><%= article.date.strftime("%B %-d, %Y") %></small>
+			  	</br>
+			    <%= link_to 'Read more', article, class: "font-header" %>
+			  </article>
 
-<% end %>
+			<% end %>
+			
+		</div>
+	</div>
+</div>
