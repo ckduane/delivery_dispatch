@@ -3,7 +3,6 @@ title: Menu
 tagline: Eat this food for your body
 content: Your body will dissolve it mostly and the rest will come out in as warm compact moist ..soil. Color and texture may vary.
 ---
-
 .container-fluid.bg-pattern.p-5
   .row.bg-white.text-center.py-5
     .col-12
@@ -15,8 +14,7 @@ content: Your body will dissolve it mostly and the rest will come out in as warm
   .col-12.col-md-3.col-lg-2
     #list-tab.list-group[role="tablist"]
       - data.menu.each_with_index do |m, i|
-        a.list-group-item.list-group-item-action[class="#{i == 0 ? 'active' : ''}" id="list-#{m.first}-list" data-toggle="list" href="#list-
-        #{m.first}" role="tab" aria-controls="#{m.first}"]
+        a.list-group-item.list-group-item-action[class="#{i == 0 ? 'active' : ''}" id="list-#{m.first}-list" data-toggle="list" href="#list-#{m.first}" role="tab" aria-controls="#{m.first}"]
           = m.first
   .col-12.col-md-9.col-lg-10
     #nav-tabContent.tab-content
