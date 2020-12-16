@@ -1,0 +1,30 @@
+---
+title: Sign Up
+tagline: Food for you to eat but first email and are we in your delivery radius?
+tagline_image: https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
+---
+.position-relative.bg-image[style="background-image: url(
+#{current_page.data.tagline_image}); background-size: cover; background-repeat: no-repeat; background-position: center"]
+.position-absolute.rounded-lg.bg-white.shadow-lg.text-center.tagline.content-mw
+  p.content-wide-mw.text-center.p-3
+    = current_page.data.tagline
+  .bg-pattern.mt-4.h-set
+
+.container-fluid.bg-pattern.p-5
+  form.bg-white.p-5
+    h1.text-center
+      = current_page.data.title
+    h4.content-wide-mw.text-center.pb-3
+      = current_page.data.tagline
+    .row.py-3
+      .col-12.col-md-6
+        .form-group
+          input#InputEmail1.form-control[type="email" aria-describedby="emailHelp" placeholder="Email Address"]
+          small#emailHelp.form-text.text-muted
+            | We'll never share your email with anyone else.
+      .col-12.col-md-3
+        .form-group
+          input#InputZipCode.form-control[type="number" placeholder="Zip Code"]
+      .col-12.col-md-3
+        button.btn.btn-orange[type="submit"]
+          | Sign Up

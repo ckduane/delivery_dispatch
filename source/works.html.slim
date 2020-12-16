@@ -14,24 +14,20 @@ steps:
     content: dolore nulla numquam quisquam sequi ipsam cumque quod tempore hic ipsum inventore aut quidem
     image: https://image.freepik.com/free-vector/express-courier-scooter-shipping-order_74855-6447.jpg
 ---
+.position-relative.bg-image[style="background-image: url(
+#{current_page.data.tagline_image}); background-size: cover; background-repeat: no-repeat; background-position: center"]
+.position-absolute.rounded-lg.bg-white.shadow-lg.text-center.tagline.content-mw
+  p.content-wide-mw.text-center.p-3
+    = current_page.data.tagline
+  .bg-pattern.mt-4.h-set
 
-<div class="position-relative bg-image" style="background-image: url(<%= current_page.data.tagline_image %>); background-size: cover; background-repeat: no-repeat; background-position: center">
-	<div class="position-absolute rounded-lg bg-white shadow-lg text-center tagline content-mw">
-		<p class="content-wide-mw text-center p-3"><%= current_page.data.tagline %></p>
-		<div class="bg-pattern mt-4 h-set">
-		</div>
-	</div>
-</div>
-<div class="container-fluid bg-pattern text-blue py-5">
-	<% current_page.data.steps.each_with_index do |s, i| %>
-		<div class="row d-flex align-items-center px-md-5 bg-white mx-5 justify-content-center <%= i == 0 ? 'pt-md-5' : 'pt-md-2'%> <%= i == 2 ? 'pb-md-5' : 'pb-md-2'%>">
-			<div class="col-12 col-md-4 offset-md-1 p-3 order-2 text-center text-md-left <%= i.even? ? ' order-md-1' : 'order-md-2' %>"  >
-				<h3><%= s.title %></h3>
-				<p class="content-mw"><%= s.content %></p>
-			</div>
-			<div class="col-12 col-md-7 order-1 <%= i.even? ? 'order-md-2' : 'order-md-1' %>">
-				<%= image_tag( s.image, class: "img-fluid") %>
-			</div>
-		</div>
-  <% end %>
-</div>
+.container-fluid.bg-pattern.text-blue.py-5
+  - current_page.data.steps.each_with_index do |s, i|
+    .row.d-flex.align-items-center.px-md-5.bg-white.mx-5.justify-content-center[class="#{i == 0 ? 'pt-md-5' : 'pt-md-2'} #{i == 2 ? 'pb-md-5' : 'pb-md-2'}"]
+      .col-12.col-md-4.offset-md-1.p-3.order-2.text-center.text-md-left[class="#{i.even? ? ' order-md-1' : 'order-md-2'}"]
+        h3
+          = s.title
+        p.content-mw
+          = s.content
+      .col-12.col-md-7.order-1[class="#{i.even? ? 'order-md-2' : 'order-md-1'}"]
+        = image_tag( s.image, class: "img-fluid")
