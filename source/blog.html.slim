@@ -1,0 +1,24 @@
+| --- title: Recent Posts content: keep up to date with dreams from dispatch delivery --- 
+.container-fluid.bg-pattern.p-5
+  .row.bg-white.text-center.py-5
+    .col-12
+      h1
+        = current_page.data.title
+      h4.content-wide-mw
+        = current_page.data.content
+.container-fluid.bg-white.p-5
+  .row
+    .col-12.col-md-7
+      - blog.articles.each do | article |
+        article.blog-post
+          h2.blog-post-title.pt-4
+            = article.title
+          small.text-muted
+            = article.date.strftime("%B %-d, %Y")
+          = link_to 'Read more', article, class: "font-header"
+    .col-12.col-md-5
+      .bg-light-blue.p-3.mb-5.rounded-lg
+        h4.text-blue
+          | About
+        p
+          = lorem.words 30

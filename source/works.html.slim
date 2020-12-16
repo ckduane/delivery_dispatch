@@ -1,0 +1,24 @@
+| --- title: How It Works tagline: so who really delivers it and i get to eat it? tagline_image: https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260 steps: - title: Order Online content: sed porro in nostrum et porro nesciunt voluptas aut rem incidunt nemo ut quia veniam commodi debitis explicabo qui image: https://image.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg - title: Making Meals content: quidem pariatur adipisci in quos est et enim aspernatur nesciunt sunt voluptatem quia itaque dolores similique officia dolores delectus velit consequatur aut quis nesciunt image: https://image.freepik.com/free-vector/tiny-cooks-making-spaghetti-dinner-isolated-flat-illustration_74855-11092.jpg - title: Dispatching Delivery content: dolore nulla numquam quisquam sequi ipsam cumque quod tempore hic ipsum inventore aut quidem image: https://image.freepik.com/free-vector/express-courier-scooter-shipping-order_74855-6447.jpg --- <div class="position-relative bg-image" style="background-image: url(
+= current_page.data.tagline_image
+| ); background-size: cover; background-repeat: no-repeat; background-position: center"> 
+.position-absolute.rounded-lg.bg-white.shadow-lg.text-center.tagline.content-mw
+  p.content-wide-mw.text-center.p-3
+    = current_page.data.tagline
+  .bg-pattern.mt-4.h-set
+
+.container-fluid.bg-pattern.text-blue.py-5
+  - current_page.data.steps.each_with_index do |s, i|
+    |  <div class="row d-flex align-items-center px-md-5 bg-white mx-5 justify-content-center 
+    = i == 0 ? 'pt-md-5' : 'pt-md-2'
+    = i == 2 ? 'pb-md-5' : 'pb-md-2'
+    | "> <div class="col-12 col-md-4 offset-md-1 p-3 order-2 text-center text-md-left 
+    = i.even? ? ' order-md-1' : 'order-md-2'
+    | " > 
+    h3
+      = s.title
+    p.content-mw
+      = s.content
+|  <div class="col-12 col-md-7 order-1 
+= i.even? ? 'order-md-2' : 'order-md-1'
+| "> 
+= image_tag( s.image, class: "img-fluid")

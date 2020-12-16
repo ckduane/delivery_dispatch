@@ -1,0 +1,14 @@
+footer.container-fluid
+  .row.bg-dark.py-5
+    .col-4
+      nav.navbar-nav
+        i.fas.fa-truck.text-light.pb-3
+        = link_to "Dispatch Delivery 2020", '#', class: 'nav-link'
+        = link_to "Contact", '/contact.html', class: 'nav-link'
+    .col-4
+      nav.navbar-nav
+        = partial "nav"
+    .col-4.pr-0
+      nav.navbar-nav
+        = link_to "Privacy Policy", '#', class: 'nav-link'
+        = link_to "Terms", '#', class: 'nav-link'

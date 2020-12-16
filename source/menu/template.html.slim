@@ -1,0 +1,24 @@
+.container-fluid.bg-pattern.p-5
+  .row.bg-white
+    .col-12.col-md-6.p-5.order-2.order-md-1
+      h3.text-lowercase.pb-3
+        = name
+      h4
+        | ingredients:
+      p.text-lowercase
+        = ingredients
+      p
+        = lorem.words 5
+      p
+        = lorem.words 30
+      h4
+        | instructions:
+      ol
+        li.pb-3
+          = lorem.words 13
+        li.pb-3
+          = lorem.words 20
+        li
+          = lorem.words 15
+    .col-12.col-md-6.order-1.order-md-2.p-0
+      = image_tag(image, class: 'img-fluid')
