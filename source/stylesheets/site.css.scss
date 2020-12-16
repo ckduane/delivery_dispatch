@@ -2,7 +2,6 @@ $yellow: #EAF0CE;
 $orange: #D1603D;
 $light-blue: #99B2DD;
 $blue: #274156;
-$gray: #333745;
 
 $f-header: 'Rammetto One', cursive;
 $f-oswald: Oswald, serif;
@@ -54,7 +53,9 @@ nav .font-header {
 .bg-image {
   height: 25rem;
 }
-
+.bg-light-blue {
+  background-color: $light-blue;
+}
 .bg-pattern {
   background-image: url("https://image.freepik.com/free-vector/hand-drawn-organic-shapes-background-design_23-2148433488.jpg");
 }
