@@ -27,10 +27,10 @@ page '/*.txt', layout: false
 #   },
 # )
 
-data.menu.each_with_index do |m , i|
-	m[1].each do |item|
-		proxy "/menu/#{item.name.parameterize(separator: '-')}.html", "/menu/template.html", :locals => { name: item.name, image: item.image, ingredients: item.ingredients }, :ignore => true
-	end
+data.menu.each do |_filename, item|
+	proxy "/menu/#{item[:name].parameterize(separator: '-')}.html", "/menu/template.html",
+	locals: { name: item[:name], image: item[:image], ingredients: item[:ingredients] },
+	ignore: true
 end
 
 # Helpers

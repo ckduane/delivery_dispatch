@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: netlify-cms
+  branch: edit-menu
 
 media_folder: source/images/uploads
 public_folder: /images/uploads
@@ -17,3 +17,16 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: Publish Date, name: date, widget: datetime}
       - {label: Body, name: body, widget: markdown}
+
+  - name: menu
+    label: Menu
+    folder: data/menu/
+    extension: yml
+    format: yml
+    create: true
+    slug: '{{name}}'
+    fields:
+      - {label: Category, name: category, widget: string, required: true}
+      - {label: Name, name: name, widget: string, required: true}
+      - {label: Ingredients, name: ingredients, widget: string}
+      - {label: Image, name: image, widget: image, required: true}
