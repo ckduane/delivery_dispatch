@@ -26,6 +26,7 @@ collections:
     create: true
     slug: '{{name}}'
     fields:
+      - {label: Category, name: category, widget: select, options: [appetizer, beverage, main, pastry, dessert], required: true}
       - {label: Name, name: name, widget: string, required: true}
       - {label: Ingredients, name: ingredients, widget: string}
       - {label: Image, name: image, widget: image, required: true}
