@@ -26,6 +26,10 @@ collections:
     create: true
     slug: '{{name}}'
     fields:
-      - {label: Name, name: name, widget: string, required: true}
-      - {label: Ingredients, name: ingredients, widget: string}
-      - {label: Image, name: image, widget: image, required: true}
+      - label: Category
+        name: category
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string, required: true}
+          - {label: Ingredients, name: ingredients, widget: string}
+          - {label: Image, name: image, widget: image, required: true}
