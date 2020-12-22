@@ -1,0 +1,9 @@
+- name: Tea Cake
+  ingredients: Flour, soymilk, sugar
+  image: images/menu/pastries_cake.jpg
+- name: Cinammon Roll
+  ingredients: Flour, sugar, cinnamon, roll
+  image: images/menu/pastries_cinnamon.jpg
+- name: Banana Bread
+  ingredients: Flour, soymilk, sugar, banana, walnuts
+  image: images/menu/pastries_banana.jpg

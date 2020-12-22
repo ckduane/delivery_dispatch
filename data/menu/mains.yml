@@ -1,0 +1,12 @@
+- name: Roughage Bowl
+  ingredients: Carrots, tomatoes, grains, proteins
+  image: images/menu/main_bowl.jpg
+- name: Cilantro Lime Cauliflower Rice
+  ingredients: Cauliflower, green onions, cilantro, lime
+  image: images/menu/main_cauliflower.jpg
+- name: Noodles
+  ingredients: Noodles
+  image: images/menu/main_noodles.jpg
+- name: Tomato Bisque
+  ingredients: Tomato, bisque
+  image: images/menu/main_tomato-bisque.jpg

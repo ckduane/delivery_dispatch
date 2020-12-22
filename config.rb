@@ -29,7 +29,7 @@ page '/*.txt', layout: false
 
 data.menu.each do |_filename, item|
 	proxy "/menu/#{item.name.parameterize(separator: '-')}.html", "/menu/template.html",
-	locals: { category: item.category, name: item.name, image: item.image, ingredients: item.ingredients },
+	locals: { name: item.name, image: item.image, ingredients: item.ingredients },
 	ignore: true
 end
 
