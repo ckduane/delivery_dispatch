@@ -20,16 +20,12 @@ collections:
 
   - name: menu
     label: Menu
-    files:
-      - label: Appetizers
-        name: appetizers
-        file: data/menu/appetizers.yml
-        fields:
-          - {label: Title, name: title, widget: string}
-          label: Item
-          name: item
-          widget: string
-          fields:
-            - {label: Name, name: name, widget: string, required: true}
-            - {label: Ingredients, name: ingredients, widget: string}
-            - {label: Image, name: image, widget: image, required: true}
+    folder: data/menu/
+    extension: yml
+    format: yml
+    create: true
+    slug: '{{name}}'
+    fields:
+      - {label: Name, name: name, widget: string, required: true}
+      - {label: Ingredients, name: ingredients, widget: string}
+      - {label: Image, name: image, widget: image, required: true}
