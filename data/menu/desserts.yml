@@ -1,0 +1,12 @@
+- name: Fudge Brownie
+  ingredients: Flour, sugar, cinnamon, chocolate
+  image: images/menu/dessert_brownie.jpg
+- name: Cinammon Sugar Churro
+  ingredients: Flour, sugar, cinnamon, oil
+  image: images/menu/dessert_churro.jpg
+- name: Chocolate Chip Cookie
+  ingredients: Flour, soymilk, sugar, vanilla, chocolate, oil
+  image: images/menu/dessert_cookie.jpg
+- name: Pistachio Ice Cream
+  ingredients: Coconut milk, pistachio sugar, chocolate
+  image: images/menu/dessert_icecream.jpg

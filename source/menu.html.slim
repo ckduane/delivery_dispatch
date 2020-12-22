@@ -4,31 +4,31 @@ tagline: Eat this food for your body
 content: Your body will dissolve it mostly and the rest will come out in as warm compact moist ..soil. Color and texture may vary.
 ---
 .container-fluid.bg-pattern.p-5
-  .row.bg-white.text-center.py-5
-    .col-12
-      h1
-        = current_page.data.tagline
-      h4.content-wide-mw
-        = current_page.data.content
+	.row.bg-white.text-center.py-5
+		.col-12
+			h1
+				= current_page.data.tagline
+			h4.content-wide-mw
+				= current_page.data.content
 .row.px-3.pt-3.pb-5
-  .col-12.col-md-3.col-lg-2
-    #list-tab.list-group[role="tablist"]
-      - data.menu.each_with_index do |m, i|
-        a.list-group-item.list-group-item-action[class="#{i == 0 ? 'active' : ''}" id="list-#{m.first}-list" data-toggle="list" href="#list-#{m.first}" role="tab" aria-controls="#{m.first}"]
-          = m.first
-  .col-12.col-md-9.col-lg-10
-    #nav-tabContent.tab-content
-      - data.menu.each_with_index do |m, i|
-        .tab-pane.fade[class="#{i == 0 ? 'show active' : ''}" id="list-#{m.first}" role="tabpanel" aria-labelledby="list-#{m.first}-list"]
-          .row
-            - m[1].each do |item|
-              .col-6.col-md-4.p-2
-                .card.shadow
-                  = image_tag(item.image, class: "card-img-top")
-                  .card-body
-                    h4.card-title.text-lowercase
-                      a href="/menu/#{item.name.parameterize(separator: '-')}.html" class="stretched-link text-decoration-none text-blue"
-                      = item.name
-                    .card-text.text-lowercase
-                      small
-                        = item.ingredients
+	.col-12.col-md-3.col-lg-2
+		#list-tab.list-group[role="tablist"]
+			- data.menu.each_with_index do |m, i|
+				a.list-group-item.list-group-item-action[class="#{i == 0 ? 'active' : ''}" id="list-#{m.first}-list" data-toggle="list" href="#list-#{m.first}" role="tab" aria-controls="#{m.first}"]
+					= m.first
+	.col-12.col-md-9.col-lg-10
+		#nav-tabContent.tab-content
+			- data.menu.each_with_index do |m, i|
+				.tab-pane.fade[class="#{i == 0 ? 'show active' : ''}" id="list-#{m.first}" role="tabpanel" aria-labelledby="list-#{m.first}-list"]
+					.row
+						- m[1].each do |item|
+							.col-6.col-md-4.p-2
+								.card.shadow
+									= image_tag(item.image, class: "card-img-top")
+									.card-body
+										h4.card-title.text-lowercase
+											a href="/menu/#{item.name.parameterize(separator: '-')}.html" class="stretched-link text-decoration-none text-blue"
+											= item.name
+										.card-text.text-lowercase
+											small
+												= item.ingredients
