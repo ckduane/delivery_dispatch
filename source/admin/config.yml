@@ -21,13 +21,15 @@ collections:
   - name: menu
     label: Menu
     files:
-      - folder: data/menu/
-        label: Category
-        name: category
+      - label: Appetizers
+        name: appetizers
+        file: data/menu/appetizers.yml
         fields:
-          - label: Item
-            name: item
-            fields:
-              - {label: Name, name: name, widget: string, required: true}
-              - {label: Ingredients, name: ingredients, widget: string}
-              - {label: Image, name: image, widget: image, required: true}
+          - {label: Title, name: title, widget: string}
+          label: Item
+          name: item
+          widget: string
+          fields:
+            - {label: Name, name: name, widget: string, required: true}
+            - {label: Ingredients, name: ingredients, widget: string}
+            - {label: Image, name: image, widget: image, required: true}
